@@ -65,6 +65,8 @@ namespace Razmotron.Rasterization
 			return _ms;
 		}
 
+		private const int RowPad = 6;
+
 		public bool Resize( int width, int height )
 		{
 			if( ( _width == width ) && ( _height == height ) )
@@ -73,7 +75,7 @@ namespace Razmotron.Rasterization
 			_height = height;
 
 			// Determine sizing with compression blocks
-			_dataSize = 2 + ( ( _width * _bpp ) + 6 ) * _height;
+			_dataSize = 2 + ( ( _width * _bpp ) + RowPad ) * _height;
 
 			// Z-buffer
 			_zbuffer = new float[ _width * _height ];
@@ -138,7 +140,7 @@ namespace Razmotron.Rasterization
 			wr.Write( IDAT );
 			wr.Write( ( byte )0x78 ); // Compression method - see ftp://ftp.isi.edu/in-notes/rfc1950.txt
 			wr.Write( ( byte )0xDA ); // Flags
-			_dataOffset = ( int )wr.BaseStream.Position + 6;
+			_dataOffset = ( int )wr.BaseStream.Position + RowPad;
 			int segmentSize = _width * _bpp + 1;
 			for( int y = 0; y < _height; y++ )
 			{
@@ -196,7 +198,7 @@ namespace Razmotron.Rasterization
 				Offset = _dataOffset,
 				Width = _width,
 				Height = _height,
-				Stride = _width * _bpp + 6,
+				Stride = _width * _bpp + RowPad,
 				BytesPerPixel = _bpp,
 				ZBuffer = _zbuffer,
 			};

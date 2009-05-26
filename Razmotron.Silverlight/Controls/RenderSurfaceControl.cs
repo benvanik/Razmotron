@@ -56,6 +56,8 @@ namespace Razmotron.Controls
 		private static void BufferPropertyChanged( DependencyObject obj, DependencyPropertyChangedEventArgs e )
 		{
 			RenderSurfaceControl control = obj as RenderSurfaceControl;
+			if( double.IsNaN( control.Width ) )
+				return;
 			control.ResetBuffer( ( int )control.Width, ( int )control.Height );
 		}
 
