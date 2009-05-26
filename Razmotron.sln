@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razmotron.Silverlight", "Razmotron.Silverlight\Razmotron.Silverlight.csproj", "{7A9293FA-99FC-49B6-A664-0199FAD6F60A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DE613956-CF73-46E8-AB55-70D09B7CA585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Silverlight", "Silverlight", "{7125C396-210C-470C-A427-C1B055BC0FF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Apps", "Test Apps", "{BBDCAA81-330D-4143-88C1-B3A9B9A812FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{EE5F64E2-E52A-4EA8-A979-305BD039B354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razmotron.Test.Sample1", "Tests\Silverlight\Razmotron.Test.Sample1\Razmotron.Test.Sample1.csproj", "{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Razmotron.Test.Samples.Web", "Tests\Silverlight\Razmotron.Test.Samples.Web\", "{D2D868D9-C69D-419D-B93D-BACD8C2FD904}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/Razmotron.Test.Samples.Web"
+		Debug.AspNetCompiler.PhysicalPath = "Tests\Silverlight\Razmotron.Test.Samples.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Razmotron.Test.Samples.Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Razmotron.Test.Samples.Web"
+		Release.AspNetCompiler.PhysicalPath = "Tests\Silverlight\Razmotron.Test.Samples.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Razmotron.Test.Samples.Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52320"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}|ClientBin|false;{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}|ClientBin|false;{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razmotron.Test.Sample2", "Tests\Silverlight\Razmotron.Test.Sample2\Razmotron.Test.Sample2.csproj", "{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razmotron.Test.Sample3", "Tests\Silverlight\Razmotron.Test.Sample3\Razmotron.Test.Sample3.csproj", "{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A9293FA-99FC-49B6-A664-0199FAD6F60A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9293FA-99FC-49B6-A664-0199FAD6F60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9293FA-99FC-49B6-A664-0199FAD6F60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9293FA-99FC-49B6-A664-0199FAD6F60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8A8035-355E-4A3F-BB54-A75053DCEEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D868D9-C69D-419D-B93D-BACD8C2FD904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D868D9-C69D-419D-B93D-BACD8C2FD904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D868D9-C69D-419D-B93D-BACD8C2FD904}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D868D9-C69D-419D-B93D-BACD8C2FD904}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C17C42-B36B-43AE-81AA-93FC9CC1000C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9798FE-B48C-4F32-94DA-7128C1CDD12A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A9293FA-99FC-49B6-A664-0199FAD6F60A} = {DE613956-CF73-46E8-AB55-70D09B7CA585}
+		{7125C396-210C-470C-A427-C1B055BC0FF9} = {BBDCAA81-330D-4143-88C1-B3A9B9A812FA}
+		{EE5F64E2-E52A-4EA8-A979-305BD039B354} = {BBDCAA81-330D-4143-88C1-B3A9B9A812FA}
+		{5F8A8035-355E-4A3F-BB54-A75053DCEEA0} = {7125C396-210C-470C-A427-C1B055BC0FF9}
+		{D2D868D9-C69D-419D-B93D-BACD8C2FD904} = {7125C396-210C-470C-A427-C1B055BC0FF9}
+		{F7C17C42-B36B-43AE-81AA-93FC9CC1000C} = {7125C396-210C-470C-A427-C1B055BC0FF9}
+		{2B9798FE-B48C-4F32-94DA-7128C1CDD12A} = {7125C396-210C-470C-A427-C1B055BC0FF9}
+	EndGlobalSection
+EndGlobal

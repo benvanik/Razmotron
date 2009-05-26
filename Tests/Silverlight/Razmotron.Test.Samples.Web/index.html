@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Razmotron Test Page</title>
+    <style type="text/css">
+        html, body
+        {
+            height: 100%;
+            overflow: auto;
+        }
+        body
+        {
+            padding: 0;
+            margin: 0;
+        }
+        /*#silverlightControlHost
+        {
+            height: 100%;
+        }*/
+    </style>
+
+    <script type="text/javascript" src="Silverlight.js"></script>
+
+    <script type="text/javascript">
+        function onSilverlightError(sender, args) {
+
+            var appSource = "";
+            if (sender != null && sender != 0) {
+                appSource = sender.getHost().Source;
+            }
+            var errorType = args.ErrorType;
+            var iErrorCode = args.ErrorCode;
+
+            var errMsg = "Unhandled Error in Silverlight 2 Application " + appSource + "\n";
+
+            errMsg += "Code: " + iErrorCode + "    \n";
+            errMsg += "Category: " + errorType + "       \n";
+            errMsg += "Message: " + args.ErrorMessage + "     \n";
+
+            if (errorType == "ParserError") {
+                errMsg += "File: " + args.xamlFile + "     \n";
+                errMsg += "Line: " + args.lineNumber + "     \n";
+                errMsg += "Position: " + args.charPosition + "     \n";
+            }
+            else if (errorType == "RuntimeError") {
+                if (args.lineNumber != 0) {
+                    errMsg += "Line: " + args.lineNumber + "     \n";
+                    errMsg += "Position: " + args.charPosition + "     \n";
+                }
+                errMsg += "MethodName: " + args.methodName + "     \n";
+            }
+
+            throw new Error(errMsg);
+        }
+    </script>
+
+    <script type="text/javascript">
+        function focusRazmotronViewer() {
+            var control = document.getElementById("razmotronViewer");
+            if (control)
+                control.focus();
+        }
+        function embedControl(xapPath) {
+            Silverlight.createObject(
+                xapPath,
+                document.getElementById("silverlightControlHost"),
+                "razmotronViewer",
+                {
+                    width: "800",
+                    height: "600",
+                    background: "black",
+                    version: "2.0.31005.0",
+                    autoUpgrade: true
+                },
+                {
+                    onLoad: focusRazmotronViewer,
+                    onError: onSilverlightError
+                });
+        }
+    </script>
+
+</head>
+<body onload="focusRazmotronViewer();">
+    <div id="silverlightControlHost">
+
+        <script type="text/javascript">
+            var sampleName = document.location.search;
+            if (sampleName)
+                sampleName = sampleName.substring(1);
+            else
+                sampleName = "Sample1";
+            embedControl("ClientBin/Razmotron.Test." + sampleName + ".xap");
+        </script>
+
+    </div>
+</body>
+</html>
